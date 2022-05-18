@@ -8,21 +8,12 @@ const app = express();
 const port = 3000;
 
 
-
-app.get('/drinks', (request, response) => {
-    response.render('drinks_index.ejs', {drinks})
-});
-
-// app.get('/drinks', (request, response) => {
-//     response.render('index.ejs', {drinks});
-// });
 app.get('/', (request, response) => {
     response.send('Welcome to the GitPub App!');
 });
 
-
-app.get("/drinks", (request, response) => {
-    response.send("drinks")
+app.get('/drinks', (request, response) => {
+    response.render('drinks_index.ejs', {drinks})
 });
 
 console.log(drinks)
