@@ -16,11 +16,12 @@ app.get('/drinks', (request, response) => {
     response.render('drinks_index.ejs', {drinks})
 });
 
+app.get('/drinks/:index', (request, response) => {
+    response.render('index.ejs', {drinks});
+});
+
 console.log(drinks)
 
-// app.get('/drinks/:index', (request, response) => {
-//     response.render('index.ejs', {allDrinks: drinks});
-// });
 
 
 
