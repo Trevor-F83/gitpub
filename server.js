@@ -17,7 +17,8 @@ app.get('/drinks', (request, response) => {
 });
 
 app.get('/drinks/:index', (request, response) => {
-    response.render('index.ejs', {drinks});
+    response.render('drinks_show.ejs', {drink: drinks[request.params.index]
+    });
 });
 
 console.log(drinks)

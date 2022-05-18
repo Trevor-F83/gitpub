@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   
+    <style type="text/css">
+        body {
+            background: rgb(16, 16, 16);
+            background-color: steelblue;
+            text-transform: capitalize;
+        }
+        </style>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitPub Drinks!</title>
+    <title>Drinks Index</title>
 </head>
+
 <body>
-    <h1>GitPub Drinks!</h1>
-    <% for (let i=0; i < allDrinks.length; i++) { %>
-     <li><a href="/drinks/<% = i %>
-    <%= allDrinks[i].name %>
-     </a>
-    </li>
-    }
+    <h1>At Foo Bar</h1>
+    <h2><%= drink.name %></h2>
+    <h3><%= drink.image %></h3>
+    <% for(let i = 0; i < drink.length; i++) { %>
+        <ul>
+           
+            <li>
+                <a href="/drinks/<%= i %>" ">
+                    <%= drinks[i].name %>
+                </a>
+            </li>
+              
+        </ul>
+        <% } %>
 </body>
+
 </html>
